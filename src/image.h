@@ -23,6 +23,11 @@ template<>
 struct pixel_type<float> {
     static const int value = CV_32F;
 };
+template<>
+struct pixel_type<int> {
+    static const int value = CV_32S;
+};
+
 
 template<typename T>
 class Image : public Mat {
@@ -30,7 +35,7 @@ public:
     // Constructors
     Image() {}
 
-    Image(const Mat &A) : Mat(A) {}
+    explicit Image(const Mat &A) : Mat(A) {}
 
     Image(int w, int h) : Mat(h, w, pixel_type<T>::value) {}
 

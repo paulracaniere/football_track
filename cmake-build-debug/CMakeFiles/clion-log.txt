@@ -1,0 +1,4 @@
+/media/abel/DATA/clion-2018.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/media/abel/DATA/Cours/3A/INF573 Analyse d'images .../Project/football_track"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /media/abel/DATA/Cours/3A/INF573 Analyse d'images .../Project/football_track/cmake-build-debug
