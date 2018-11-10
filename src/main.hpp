@@ -20,13 +20,29 @@ void remove_cc(const Image<uchar>& src, Image<uchar>& dst, const Image<int>& cc_
 
 // Shows the image in a miniature
 template<typename T>
-void imshow2(string str, const Image<T>& src){
-    Size display_size(1000, 600);
+void imshow_quarter(string str, const Image<T>& src){
+    Size display_size(900, 450);
+    Image<T> dezoomed;
+    resize(src, dezoomed, display_size);
+    imshow(str, dezoomed);
+}
+
+template<typename T>
+void imshow_half(string str, const Image<T>& src){
+    Size display_size(1800, 450);
     Image<T> dezoomed;
     resize(src, dezoomed, display_size);
     imshow(str, dezoomed);
 }
 
 void remove_cc_dim(const Image<uchar>& src, Image<Vec3b>& dst, const Image<int>& cc_im, const vector<float>& dims, float th);
+
+void matches2points(const vector<KeyPoint>& train, const vector<KeyPoint>& query,
+                    const std::vector<cv::DMatch>& matches, std::vector<cv::Point2f>& pts_train,
+                    std::vector<Point2f>& pts_query);
+
+inline void bound(double& val, const double& th, const double& target=0.0){
+    val =max(min(val, target + th), target - th);
+}
 
 #endif //FOOTBALL_TRACK_MAIN_HPP
