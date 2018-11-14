@@ -1,3 +1,0 @@
-/media/abel/DATA/Cours/3A/INF573 Analyse d'images .../Project/football_track/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/media/abel/DATA/Cours/3A/INF573 Analyse d'images .../Project/football_track/cmake-build-debug/CMakeFiles/edit_cache.dir
-/media/abel/DATA/Cours/3A/INF573 Analyse d'images .../Project/football_track/cmake-build-debug/CMakeFiles/football_track.dir
